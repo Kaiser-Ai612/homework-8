@@ -46,7 +46,12 @@ namespace dz8
             Task1 task2 = new Task1("Проектирование системы", DateTime.Now.AddDays(13), timur);
             Task1 task3 = new Task1("Разработка функционала", DateTime.Now.AddDays(14), timur);
             Task1 task4 = new Task1("Тестирование системы", DateTime.Now.AddDays(15), timur);
-            Task1 task5 = new Task1("Подготовка документации", DateTime.Now.AddDays(16), timur);
+            Task1 task5 = new Task1("Подготовка документации 1", DateTime.Now.AddDays(17), timur);
+            Task1 task6 = new Task1("Подготовка документации для патента", DateTime.Now.AddDays(18), timur);
+            Task1 task7 = new Task1("Подготовка документации для теста", DateTime.Now.AddDays(19), timur);
+            Task1 task8 = new Task1("Подготовка документации для начальства", DateTime.Now.AddDays(16), timur);
+            Task1 task9 = new Task1("разработка интерфейса", DateTime.Now.AddDays(15), timur);
+            Task1 task10 = new Task1("тестирование 1", DateTime.Now.AddDays(16), timur);
 
             // Добавление задач в проект
             project.AddTask(task1);
@@ -54,6 +59,11 @@ namespace dz8
             project.AddTask(task3);
             project.AddTask(task4);
             project.AddTask(task5);
+            project.AddTask(task6);
+            project.AddTask(task7);
+            project.AddTask(task8);
+            project.AddTask(task9);
+            project.AddTask(task10);
 
             // Перевод проекта в статус "Исполнение"
             project.StartProject();
@@ -64,6 +74,11 @@ namespace dz8
             sergey.AcceptTask(task3); 
             ilshat.AcceptTask(task4); 
             laysan.AcceptTask(task5);
+            marat.AcceptTask(task6);
+            vitya.AcceptTask(task7);
+            dina.AcceptTask(task8);
+            anton.AcceptTask(task9);
+            zhenya.AcceptTask(task10);
 
             //
             if (rashid.DelegateTo(task1, lukas))
@@ -83,29 +98,38 @@ namespace dz8
                 report1.Odobrenie = true;
             }
 
-            // Выполнение задач            
-            ilham.AcceptTask(task2);
-            sergey.AcceptTask(task3);
-            ilshat.AcceptTask(task4);
-            laysan.AcceptTask(task5);
-
             // Завершение задач
             task2.Complete();
             task3.Complete();
             task4.Complete();
             task5.Complete();
+            task6.Complete();
+            task7.Complete();
+            task8.Complete();
+            task9.Complete();
+            task10.Complete();
 
             // Создание отчетов
             Report report2 = new Report("Задача 2 выполнена", DateTime.Now, ilham);
             Report report3 = new Report("Задача 3 выполнена", DateTime.Now, sergey);
             Report report4 = new Report("Задача 4 выполнена", DateTime.Now, ilshat);
             Report report5 = new Report("Задача 5 выполнена", DateTime.Now, laysan);
+            Report report6 = new Report("Задача 6 выполнена", DateTime.Now, laysan);
+            Report report7 = new Report("Задача 7 выполнена", DateTime.Now, laysan);
+            Report report8 = new Report("Задача 8 выполнена", DateTime.Now, laysan);
+            Report report9 = new Report("Задача 9 выполнена", DateTime.Now, laysan);
+            Report report10 = new Report("Задача 10 выполнена", DateTime.Now, laysan);
 
             // Утверждение отчетов
             report2.Odobrenie = true;
             report3.Odobrenie = true;
             report4.Odobrenie = true;
             report5.Odobrenie = true;
+            report6.Odobrenie = true;
+            report7.Odobrenie = true;
+            report8.Odobrenie = true;
+            report9.Odobrenie = true;
+            report10.Odobrenie = true;
 
             if (project.IsCompleted())
             {

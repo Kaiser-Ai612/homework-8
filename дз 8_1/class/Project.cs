@@ -46,7 +46,7 @@ namespace дз_8_1.@class
         {
             foreach (var task in Tasks)
             {
-                if (task.Status != TaskStat.Done)
+                if (task.Status != TaskStat.Done )
                 {
                     return false;
                 }
